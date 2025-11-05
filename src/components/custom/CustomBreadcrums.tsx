@@ -1,6 +1,6 @@
 import { SlashIcon } from "lucide-react"
 import { Link, useLocation } from "react-router"
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "../ui/breadcrumb"
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "../ui/breadcrumb"
 import { cn } from "@/lib/utils";
 
 interface Breadcrumbs {
@@ -13,7 +13,7 @@ interface Props {
     breadcrumbs?: Breadcrumbs[];
 }
 
-export const CustomBreadcrums = ({ currentPage, breadcrumbs = [] }: Props) => {
+export const CustomBreadcrums = ({ breadcrumbs = [] }: Props) => {
 
     const { pathname } = useLocation();
     const actual = pathname.split("/")[1];
