@@ -1,0 +1,1 @@
+import{m as t,r as o,j as m}from"./index-C5_Eu_pi.js";const c="MI-PARAMETRO",l=()=>{const[r,e]=t(),s=r.get("parametro")??"All";return o.useEffect(()=>{e(a=>(a.set("parametro",c),a))},[]),console.log(s),m.jsx("div",{children:"AdminPage"})};export{l as AdminPage,l as default};
