@@ -3,7 +3,7 @@ import { getHeroAction } from "../actions/get-hero.action"
 
 
 
-export const useHero = (idSlug: string) => {
+export const useHeroBySlug = (idSlug: string) => {
     return useQuery({
         queryKey: ['hero', { idSlug }],
         queryFn: () => getHeroAction(idSlug),

@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Shield, Zap, Brain, Gauge, Users, Star, Award } from "lucide-react"
 // import Image from "next/image"
 
-import { useHero } from "../hoocks/useHero"
+import { useHeroBySlug } from "../hoocks/useHeroBySlug"
 import { Navigate } from "react-router"
 // import type { Hero } from "../types/hero.interface"
 
@@ -37,7 +37,7 @@ interface Props {
 export default function SuperheroProfile({ idSlug }: Props) {
 
 
-    const { data: superheroData, isError } = useHero(idSlug);
+    const { data: superheroData, isError } = useHeroBySlug(idSlug);
 
 
     if (isError) {
